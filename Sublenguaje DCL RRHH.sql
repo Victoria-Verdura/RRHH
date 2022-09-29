@@ -1,0 +1,22 @@
+use rrhh;
+create user if not exists 'usuariolector'@'localhost' identified by 'lector123';
+grant select on rrhh.empleados to 'usuariolector'@'localhost' ;
+grant select on rrhh.establecimiento to 'usuariolector'@'localhost' ;
+grant select on rrhh.persona to 'usuariolector'@'localhost' ;
+grant select on rrhh.puesto to 'usuariolector'@'localhost' ;
+grant select on rrhh.salario to 'usuariolector'@'localhost' ;
+grant select on rrhh.log_persona to 'usuariolector'@'localhost' ;
+grant select on rrhh.log_salario to 'usuariolector'@'localhost' ;
+revoke delete on *.* from 'usuariolector'@'localhost' ;
+show grants for 'usuariolector'@'localhost' ;
+
+create user if not exists 'usuario2'@'localhost' identified by 'usuario123';
+grant select, insert, update on rrhh.empleados to 'usuario2'@'localhost';
+grant select, insert, update on rrhh.establecimiento to 'usuario2'@'localhost';
+grant select, insert, update on rrhh.persona to 'usuario2'@'localhost';
+grant select, insert, update on rrhh.puesto to 'usuario2'@'localhost';
+grant select, insert, update on rrhh.salario to 'usuario2'@'localhost';
+grant select, insert, update on rrhh.log_persona to 'usuario2'@'localhost';
+grant select, insert, update on rrhh.log_salario to 'usuario2'@'localhost';
+revoke delete on *.* from 'usuario2'@'localhost';
+show grants for 'usuario2'@'localhost';
