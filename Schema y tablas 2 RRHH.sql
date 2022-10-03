@@ -50,12 +50,12 @@ foreign key(cd_cod_persona) references persona (cd_cod_persona)
 create table if not exists Salario (
 cd_puesto	INT,
 nr_sec_salario INT primary key auto_increment,
-vl_sueldo decimal(6,2) not null ,
-vl_presentismo	DECIMAL(6,2) not null,
-vl_adicional	DECIMAL(6,2),
-vl_horas_extras	DECIMAL(6,2),
-vl_jubilacion	DECIMAL(6,2),
-vl_obra_social	DECIMAL(6,2),
+vl_sueldo	DECIMAL not null ,
+vl_presentismo	DECIMAL not null,
+vl_adicional	DECIMAL,
+vl_horas_extras	DECIMAL,
+vl_jubilacion	DECIMAL,
+vl_obra_social	DECIMAL,
 foreign key (cd_puesto) references Puesto (nr_sec_puesto)
 )engine = innodb ;
 
