@@ -1,4 +1,4 @@
-use rrhh;
+use base_rrhh;
 create or replace view empleados_view as 
 select p.cd_cod_persona,
 p.nm_nombre, 
