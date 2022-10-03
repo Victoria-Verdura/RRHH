@@ -1,4 +1,4 @@
-use rrhh;
+use base_rrhh;
 set @@autocommit = 0;
 start transaction;
 delete from empleados where nr_legajo = 5;
@@ -10,7 +10,7 @@ delete from empleados where nr_legajo = 4;
 rollback;
 #commit
 
-use rrhh;
+use base_rrhh;
 set @@autocommit = 0;
 start transaction;
 insert into persona (nr_dni,  nm_nombre, nm_seg_nombre, nm_apellido, dt_nacimiento	, ds_sexo	, nr_telefono, ds_direccion ,  cd_postal, ds_ciudad, ds_provincia,  ds_email)
