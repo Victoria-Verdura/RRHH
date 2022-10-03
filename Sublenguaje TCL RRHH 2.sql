@@ -1,15 +1,17 @@
 use rrhh;
+set @@autocommit = 0;
 start transaction;
 delete from empleados where nr_legajo = 5;
 rollback;
 #commit 
-
+set @@autocommit = 0;
 start transaction;
 delete from empleados where nr_legajo = 4;
 rollback;
 #commit
 
 use rrhh;
+set @@autocommit = 0;
 start transaction;
 insert into persona (nr_dni,  nm_nombre, nm_seg_nombre, nm_apellido, dt_nacimiento	, ds_sexo	, nr_telefono, ds_direccion ,  cd_postal, ds_ciudad, ds_provincia,  ds_email)
 values (14777897,  'Camila', 'Lucia', 'Gonzales', '1998-10-02', 'Femenino', 13156778, 'Ruta 9 325',  2134, 'Funes', 'Santa Fe', 'gonzalescamila@gmail.com'),
