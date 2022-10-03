@@ -1,4 +1,4 @@
-use rrhh;
+use base_rrhh;
 insert into establecimiento(nm_establecimiento, cd_cuit, nr_telefono, ds_direccion, cd_postal, ds_ciudad, ds_provincia, ds_email)
 values ('Sanatorio GO'	,	1112	,	15669871	,	'Galindo 2415'	,	2134	,	'Funes'	,	'Santa Fe'	,	'sanatorio@gmail.com'	),
 ('Clinica GO'	,	17432789	,			15889762	,	'Cordoba 15'	,	2000	,	'Rosario'	,	'Santa Fe'	,	'clinica@gmail.com'	),
@@ -7,7 +7,6 @@ values ('Sanatorio GO'	,	1112	,	15669871	,	'Galindo 2415'	,	2134	,	'Funes'	,	'Sa
 ('Hospital Maternidad' 	,	12131489	,			15772132	,	'Ovideos Lagos 2890'	,	2000	,	'Rosario'	,	'Santa Fe'	,	'maternidad@gmail.com'	)	;
 commit;
 
-use rrhh;
 insert into persona(nr_dni, nm_nombre, nm_seg_nombre, nm_apellido, dt_nacimiento, ds_sexo	, nr_telefono, ds_direccion , cd_postal, ds_ciudad, ds_provincia, ds_email)
 values (41735948,  'Victoria', 'Belen', 'Verdura', '1999-10-02',  'Femenino', 13145353, 'Galindo 2415',  2134, 'Funes', 'Santa Fe',  'verduravictoria@gmail.com'),
 (39091447,  'Rocio', 'Celeste', 'Magallanes', '1995-07-25',  'Femenino', 164569813, 'Ovidio 426',  2000, 'Rosario', 'Santa Fe',  'magallanesrocio@gmail.com'),
@@ -26,7 +25,6 @@ values (41735948,  'Victoria', 'Belen', 'Verdura', '1999-10-02',  'Femenino', 13
 (42290987, 'Matias', null, 'Amsler', '1998-10-17', 'Masculino', 19001456, 'Casilda 332', 2134, 'Rosario', 'Santa Fe', 'amslermatias@gmail.com');
 commit;
 
-use rrhh;
 insert into puesto(nm_puesto ,cd_establecimiento,nr_piso)
 values ( 'Admisión', 1, 0),
 ( 'Facturación', 1, 2),
@@ -35,7 +33,6 @@ values ( 'Admisión', 1, 0),
 ( 'Contaduria', 1, 3);
 commit;
 
-use rrhh;
 insert into empleados (cd_cod_persona , nr_sec_puesto , dt_inicio , dt_fin)
 values (1, 2, '2021-12-01', null),
 (2, 3, '2021-09-01', null),
@@ -47,7 +44,6 @@ values (1, 2, '2021-12-01', null),
 (8, 4, '2021-12-01', null);
 commit;
 
-use rrhh;
 insert into salario( cd_puesto	,  vl_sueldo	, vl_presentismo	, vl_adicional	, vl_horas_extras	, vl_jubilacion	, vl_obra_social)
 values ( 1,90000, 10000,12000, 800, '-1000', '-3000'),
 (2,100000, 10000, 12000, 900, '-1100', '-4000'),
@@ -56,7 +52,6 @@ values ( 1,90000, 10000,12000, 800, '-1000', '-3000'),
 (5,110000, 10000, null, 1000, '-1000', '-3000');
 commit;
 
-use rrhh;
 insert into horarios (nr_sec_puesto, hr_inicio, hr_final)
 values (1,'08:00:00','16:00:00'),
 (2,'07:00:00','15:00:00'),
@@ -65,7 +60,6 @@ values (1,'08:00:00','16:00:00'),
 (5,'10:00:00','18:00:00');
 commit;
 
-use rrhh;
 insert into vacaciones (nr_sec_puesto, qt_dias, cd_mes ,ds_mes)
 values (1, 7, 2, 'Febrero'),
 (2, 10, 3, 'Marzo'),
@@ -74,7 +68,6 @@ values (1, 7, 2, 'Febrero'),
 (5, 7, 4, 'Abril');
 commit;
 
-use rrhh;
 insert into especialidad (cd_esp, ds_esp)
 values (5, 'Clinica medica'),
 (10, 'Dermatologia'),
@@ -89,7 +82,6 @@ values (5, 'Clinica medica'),
 (55, 'Nutricionista');
 commit;
 
-use rrhh;
 insert into medicos (cd_cod_persona, nr_mat, nr_mat_esp,cd_esp)
 values (9, 2345, 234500, 3),
 (10, 5665, 566500, 9),
