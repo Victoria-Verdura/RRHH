@@ -1,8 +1,8 @@
-USE `rrhh`;
+USE `base_rrhh`;
 DROP procedure IF EXISTS `ordenar_empleados`;
 
 DELIMITER $$
-USE `rrhh`$$
+USE `base_rrhh`$$
 CREATE PROCEDURE `ordenar_empleados` (orden int, asc_desc varchar (50))
 BEGIN
 if orden = 1 and asc_desc = 'ASC' then 
@@ -30,11 +30,11 @@ END$$
 DELIMITER ;
 
 
-USE `rrhh`;
+USE `base_rrhh`;
 DROP procedure IF EXISTS `insertar_personas`;
 
 DELIMITER $$
-USE `rrhh`$$
+USE `base_rrhh`$$
 CREATE PROCEDURE `insertar_personas`( nr_dni INT, dt_nacimiento date, nm_apellido text, nm_nombre text, nm_seg_nombre text, nr_telefono int)
 BEGIN
 insert into persona ( nr_dni, nm_nombre, nm_seg_nombre, nm_apellido, dt_nacimiento, ds_sexo, nr_telefono, ds_direccion, cd_postal, ds_ciudad,ds_provincia, ds_email)
