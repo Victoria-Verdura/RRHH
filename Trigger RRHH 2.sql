@@ -1,4 +1,4 @@
-use rrhh;
+use base_rrhh;
 create table if not exists log_persona
 (id_log int auto_increment ,
 nr_dni int ,
@@ -32,7 +32,6 @@ values (new.nr_dni, new.nm_nombre, new.nm_seg_nombre, new.nm_apellido, 'insert',
 end //
 delimiter ;
 
-use rrhh;
 create table if not exists log_salario
 (id_log int auto_increment,
 cd_puesto int,
